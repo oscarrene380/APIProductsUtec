@@ -9,11 +9,6 @@ app.use(cors());
 
 const db_manager = require('./persistence/dbmanager');
 
-// HOME
-app.get('/', (req, res) => {
-    res.send('Welcome, this is the API yo manage your products information');
-});
-
 // CRUD
 
 // create user
@@ -37,4 +32,9 @@ app.delete('/product', (req, res) => {
 // starting server
 app.listen(4000, () => {
     console.log('API RES running on port: 4000');
+});
+
+// HOME
+app.get('/', (req, res) => {
+    res.send('Welcome, this is the API yo manage your products information');
 });
