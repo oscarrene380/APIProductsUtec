@@ -9,6 +9,11 @@ app.use(cors());
 
 const db_manager = require('./persistence/dbmanager');
 
+// HOME
+app.get('/', (req, res) => {
+    res.send('Welcome, this is the API yo manage your products information');
+});
+
 // CRUD
 
 // create user
