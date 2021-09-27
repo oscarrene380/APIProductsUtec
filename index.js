@@ -41,3 +41,8 @@ app.listen(app.get('port'), () => {
 app.get('/', (req, res) => {
     res.send('Welcome, this is the API yo manage your products information');
 });
+
+// if the route doesn't exist it's gonna be redirect to 404 page
+app.use((req, res)=>{
+    res.status(404).send({'error': 'Page not found'});
+});
