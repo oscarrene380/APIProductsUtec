@@ -36,3 +36,8 @@ app.delete('/product', (req, res) => {
 app.listen(app.get('port'), () => {
     console.log('API running on port: '+app.get('port'));
 });
+
+// HOME
+app.get('/', (req, res) => {
+    res.send('Welcome, this is the API yo manage your products information');
+});
